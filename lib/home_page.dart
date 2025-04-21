@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stripe_paymnet_app/services/service_get_with_http.dart';
 import 'package:stripe_paymnet_app/services/stripe_services.dart';
 
 class HomePage extends StatefulWidget {
@@ -17,6 +18,7 @@ class _HomePageState extends State<HomePage> {
           onPressed: () {
             // Call the payment method from StripeServices
             StripeServices.instance.makePayment(context);
+            // StripeServicesGetWithHttp.instance.makePayment();
           },
           child: Text('Pay with Stripe'),
         ),
